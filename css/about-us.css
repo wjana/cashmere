@@ -1,0 +1,21 @@
+body{
+	overflow-x: hidden;
+}
+.header-img{
+	width: 100%;
+}
+.header-img img{
+	width: 100%;
+}
+.auMain{
+	padding: 20px 0;
+	margin-bottom: 20px;
+	font-size: 16px;
+	line-height: 1.8;
+}
+.auMain .container p{
+	margin-bottom: 1em;
+}
+.auMain .container p img{
+	width: 100%;
+}

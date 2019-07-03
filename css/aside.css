@@ -1,0 +1,137 @@
+/*侧边隐藏导航*/
+.side-nav{
+	width: 300px;
+	height: 100%;
+	position: absolute;
+	right: -300px;
+	top: 0px;
+	z-index: 100;
+	background-color: #f5e1ab;
+}
+.side-nav .bg{
+	width: 300px;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: black;
+	background: rgba(0,0,0,.5);
+	transition: height .5s;
+	/*animation: ;*/
+}
+
+.side-nav h2{
+	font-size: 1.2em;
+	text-align: center;
+	margin: 25px 40px 0px 40px;
+	border-bottom: 2px solid;
+	padding-bottom: 5px;
+}
+.side-nav a{
+	font-size: 1.3em;
+	font-weight: 100;
+	line-height: 1;
+}
+/*侧边导航一级菜单*/
+.sn-menu1 li{
+	width: 100%;
+	padding: 0 40px;
+	text-align: left;
+	margin: 1.5em 0;
+	float: left;
+}
+.sn-menu1 li i{
+	float: right;
+	font-size: 5px;
+}
+.sn-menu1 li a{
+	height: 100%;
+	padding-bottom: 10px;
+}
+/*鼠标放上去滑动效果*/
+.slideNav{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 20px;
+	overflow: hidden;
+}
+.slideNav::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	background-color: black;
+	transition: transform 0.7s;
+}
+.slideNav:hover::before{
+	transform: translateX(200%);
+}
+.slideNav::after{
+	content: '';
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	top: calc(100% - 2px);
+	background: black;
+    transition: transform 0.7s;
+}
+.slideNav:hover::after{
+	transform: translateX(100%);
+}
+/*二级导航*/
+.sn-menu2{
+	width: 300px;
+	height: 100vh;
+	background-color: #f5e1ab;
+	position: fixed;
+	right: -300px;
+	top: 0;
+	z-index: 999;
+	border-left: 1px solid black;
+	transition: right .5s linear 0s;
+}
+.sn-menu2 li{
+	margin: 1em 0;
+	height: 2em;
+}
+.sn-menu2 h2{
+	font-size: 1.2em;
+	text-align: center;
+	margin: 25px 40px 0px 40px;
+	border-bottom: 2px solid;
+	padding-bottom: 5px;
+}
+.sn-menu2 a{
+	font-size: 1.3em;
+	font-weight: 100;
+	line-height: 1;
+}
+.sn-menu2 li a:hover{
+	background-color: #f5e1ab;
+	/*border-bottom: 1px solid black;*/
+}
+.sn-menu2 li{
+	width: 100%;
+	padding: 0 40px;
+	text-align: left;
+	margin: 1.5em 0;
+	float: left;
+	position: relative;
+}
+.sn-menu2 li i{
+	float: right;
+	font-size: 5px;
+}
+.sn-menu2 li a{
+	height: 100%;
+	padding-bottom: 10px;
+}
+.sn-menu2 .back i{
+	float: left;
+	line-height: 17px;
+}

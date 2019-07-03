@@ -1,0 +1,172 @@
+body{
+	overflow-x: hidden;
+}
+.header-img{
+	width: 100%;
+}
+.header-img img{
+	width: 100%;
+}
+.pMain{
+	padding: 70px 0;
+}
+.pMain .pant{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 1.8em;
+}
+.pMain .pant-img{
+	position: relative;
+}
+.pMain .pant-img img{
+	width: 100%;
+}
+.pMain .pant-img::before{
+	content: '';
+	width: 100%;
+	height: 0%;
+	background: #f5e1ab;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all .3s linear;
+    z-index: 1;
+    opacity: 0.9;
+} 
+.pMain .pant:hover .pant-img::before{
+	height: 50%;
+}
+.pMain .pant-img::after{
+	content: '';
+	width: 100%;
+	height: 0%;
+	background: #f5e1ab;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    transition: all .3s linear;
+    /*z-index: 1;*/
+    opacity: 0.9;
+} 
+.pMain .pant:hover .pant-img::after{
+	height: 50%;
+}
+.hover-knowmore{
+	width: 215px;
+	height: 52px;
+	line-height: 52px;
+	text-align: center;
+	border-radius: 30px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+	position: absolute;
+	top: calc(50% - 68px);
+	left: calc(50% - 108px);
+	overflow: hidden;
+	z-index: 9;
+	transition: 0.3s;
+	display: none;
+	background-color: white;
+}
+.pant:hover .hover-knowmore{
+	display: block;
+	animation: jump 1s linear 0s;
+}
+@keyframes jump{
+	0%{transform: scale(1);}
+	25%{transform: scale(1.2);}
+	50%{transform: scale(1);}
+	75%{transform: scale(1.1);}
+	100%{transform: scale(1);}
+}
+.hover-knowmore::before{
+	content: '';
+	width: 100%;
+	height: 0;
+	background-color: #f5e1ab;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transition: 0.3s;
+}
+.hover-knowmore:hover::before{
+	height: 100%;
+}
+.hover-knowmore a{
+	color: #f5e1ab;
+	display: block;
+    position: relative;
+    z-index: 9;
+    font-size: 16px;
+    transition: color .3s linear;
+}
+.hover-knowmore:hover a{
+	color: white;
+	text-decoration: none;
+}
+.pant-txt{
+	border: 1px solid #f1f1f1;
+	padding: 20px 0 20px 25px;
+	position: relative;
+}
+.pant-txt h5{
+	overflow: hidden;
+	margin: 0;
+}
+.pant-txt h5 a{
+	font-size: 18px;
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: black;
+}
+.pant-txt h5 a:hover{
+	color: #F5E1AB;
+	text-decoration: none;
+}
+.pant-txt::before{
+    content: '';
+    width: 10px;
+    height: 0;
+    background: #f5e1ab;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition: all .30s linear;
+}
+.pant:hover .pant-txt::before{
+	height: 100%;
+}
+.pant-txt::after{
+    content: '';
+    width: 10px;
+    height: 100%;
+    background: #f5e1ab;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: all .30s linear;
+}
+.ptxt{
+	overflow: hidden;
+	width: 96%;
+	margin: 0;
+	margin-top: 5px;
+}
+.ptxt p{
+	color: #666666;
+	font-size: 13px;
+	font-weight: bold;
+	height: 15px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+}
+.pagination{
+	padding-left: 42%;
+}
+.pagination .pageNum a{
+	background-color: #f5e1ab;
+}

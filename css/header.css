@@ -1,0 +1,138 @@
+/*顶部固定导航条*/
+.navbar-fixed-top{
+	background: rgba(0,0,0,0);
+	z-index: 20;
+	/*border: 1px black solid;*/
+	height: 60px;
+	transition: left 0.3s;
+}
+/*logo*/
+.head-logo{
+	padding: 1rem 0px;
+}
+.head-logo img{
+	width: 100%;
+	margin: 5px 0px;
+}
+/*<!--首页导航条菜单-->*/
+#navMenu{
+	width: 100%;
+	height: 50px;
+	float: right;
+	overflow: hidden;
+	position: relative;
+	margin-top: 10px;
+}
+#navMenu li{
+	padding: 9px 18px;
+	text-align: center;
+	line-height: 50px;
+	height: 50px;
+	float: left;
+	border-bottom: 2px solid #a7a197;
+	transition: .5s ease-in-out;
+	overflow: hidden;
+	position: relative;
+}
+#navMenu li:hover{
+	border-bottom: 2px solid #f5e1ab;
+}
+#navMenu li a{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+#navMenu .current>a{
+	color: #f5e1ab;
+	transition: .5s ease-in-out;
+}
+#navMenu .current{
+	border-bottom: 2px solid #f5e1ab;
+	/*overflow: hidden;*/
+}
+#navMenu li::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	background-color: #f5e1ab;
+	transition: transform 0.7s;
+}
+#navMenu li:hover::before{
+	transform: translateX(201%);
+}
+#navMenu li::after{
+	content: '';
+	width: 10%;
+	height: 2px;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	top: calc(100% - 2px);
+	background: #f5e1ab;
+    transition: transform 0.7s;
+}
+#navMenu li:hover::after{
+	transform: translateX(20%);
+}
+#navMenu .current::before{
+	transform: translateX(201%);
+}
+#navMenu .current::after{
+	transform: translateX(20%);
+}
+#navMenu li:hover .a{
+	color: #f5e1ab;
+	text-decoration: none;
+}
+#navMenu li a{
+	font-size: 1.1em;
+}
+#navMenu{
+	/*border-bottom: 2px solid grey;*/
+}
+/*侧边导航按钮*/
+.sideBtn{
+	padding-top: 26px;
+	margin-right: 0px;
+	position: relative;
+	cursor: pointer;
+	/*background-color: green;*/
+}
+.sideBtn .sBtn{
+	width: 25px;
+	height: 20px;
+	float: center;
+	position: absolute;
+	top: 25px;
+	left: 0;
+}
+.sideBtn .sBtn .icon-bar{
+	width: 25px;
+	height: 4px;
+	display: block;
+	float: left;
+	background-color: #f5e1ab;
+	margin: 2px 0px;
+}
+.sideBtn:hover .icon-bar1{
+	width: 15px;
+	transition: .5s;
+}
+.sideBtn:hover .icon-bar3{
+	width: 15px;
+	float: right;
+	transition: .5s;
+}
+.sBtn2{
+	color: #f5e1ab;
+	font-size: 25px;
+	top: 1.2em;
+	display: none;
+}
+.sBtn2:hover{
+	transform: scale(1.5);
+	transition: 0.5s;
+}
